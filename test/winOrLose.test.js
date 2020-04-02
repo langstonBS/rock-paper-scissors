@@ -2,7 +2,7 @@ import { winOrLose } from '../src/winOrLose.js';
 
 const test = QUnit.test;
 
-test(' tell if win onr lose', function(assert){
+test(' tell if win or lose', function(assert){
     //Arrange
     // Set up your parameters and expectations
     const expected = 1;
@@ -15,7 +15,7 @@ test(' tell if win onr lose', function(assert){
     assert.equal(expected, actual);
 });
 
-test(' tell if win onr lose', function(assert){
+test(' tell if win orr lose', function(assert){
     //Arrange
     // Set up your parameters and expectations
     const expected1 = 1;

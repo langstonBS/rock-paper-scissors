@@ -2,7 +2,7 @@ import { winOrLose } from './src/winOrLose.js';
 
 //git values from HTML
 const playButten = document.getElementById('button-press');
-let message = document.getElementById('message');
+//let message = document.getElementById('message');
 let loseGames = document.getElementById('loss');
 let winGames = document.getElementById('win');
 let gamesPlayeded = document.getElementById('games');
@@ -25,13 +25,10 @@ playButten.addEventListener('click', () => {
     }
 
     let computer = computerPlay();
-
     let winner = winOrLose(person, computer);
 
     countWinOrLoss(winner);
-
-    tellThePlaer(win, loss, total);
-    
+    tellThePlayer(win, loss, total);   
 });
 
 function computerPlay() {
@@ -39,25 +36,23 @@ function computerPlay() {
     return compterMove;
 }
 
-function countWinOrLoss(winreconrd)
+function countWinOrLoss(winRecord)
 {
-    if (winreconrd === 1){
-        win = win + 1; 
-    } else if (winreconrd === 2){
-        loss = loss + 1;
+    if (winRecord === 1){
+        win++; 
+    } else if (winRecord === 2){
+        loss++;
     } else {
-        total = total + 1;
+        total++;
     }
 }
 
-
-function tellThePlaer(win, lose, total)
+function tellThePlayer(win, lose, total)
 {
     winGames.textContent = win;
     loseGames.textContent = lose;
     total = total + win + lose;
     gamesPlayeded.textContent = total;
-
 }
 
 
