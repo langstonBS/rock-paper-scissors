@@ -2,7 +2,7 @@ import { winOrLose } from './src/winOrLose.js';
 
 //git values from HTML
 const playButten = document.getElementById('button-press');
-//let message = document.getElementById('message');
+let computerThrowSpan = document.getElementById('message');
 let loseGames = document.getElementById('loss');
 let winGames = document.getElementById('win');
 let gamesPlayeded = document.getElementById('games');
@@ -16,6 +16,8 @@ let total = 0;
 playButten.addEventListener('click', () => {
     const selectedChoice = document.querySelector('input[type=radio]:checked');
     let selection = selectedChoice.value;
+    let computer = computerPlay();
+    let winner = winOrLose(person, computer);
 
     if (selection === 'rock'){
         person = 0;
@@ -25,8 +27,7 @@ playButten.addEventListener('click', () => {
         person = 2;
     }
 
-    let computer = computerPlay();
-    let winner = winOrLose(person, computer);
+    
 
     countWinOrLoss(winner);
     tellThePlayer(win, loss, total);   
@@ -34,7 +35,18 @@ playButten.addEventListener('click', () => {
 
 function computerPlay() {
     let compterMove = Math.floor(Math.random() * 3);
+    if (compterMove === 1) {
+        computerThrowSpan.textContent = 'Rock';
+    }
+    else if (compterMove === 2) {
+        computerThrowSpan.textContent = 'Scissors';
+    }
+    else {
+        computerThrowSpan.textContent = 'Paper';
+
+    }
     return compterMove;
+
 }
 
 function countWinOrLoss(winRecord)
@@ -60,6 +72,7 @@ resetButton.addEventListener('click', () => {
     winGames.textContent = '0';
     loseGames.textContent = '0';
     gamesPlayeded.textContent = '0';
+    computerThrowSpan.textContent = '';
 
     win = 0;
     loss = 0;
