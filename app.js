@@ -15,7 +15,6 @@ let total = 0;
 playButten.addEventListener('click', () => {
     const selectedChoice = document.querySelector('input[type=radio]:checked');
     let selection = selectedChoice.value;
-    console.log(selection);
 
     if (selection === 'rock'){
         person = 0;
@@ -26,18 +25,13 @@ playButten.addEventListener('click', () => {
     }
 
     let computer = computerPlay();
+
     let winner = winOrLose(person, computer);
-    
-    console.log(winner);
-    
+
     countWinOrLoss(winner);
+
     tellThePlaer(win, loss, total);
-
-    console.log(computer);
-    console.log(person);
-    console.log('win:', win);
-    console.log('loss:', loss); 
-
+    
 });
 
 function computerPlay() {
@@ -61,7 +55,6 @@ function tellThePlaer(win, lose, total)
 {
     winGames.textContent = win;
     loseGames.textContent = lose;
-    console.log('total', total);
     total = total + win + lose;
     gamesPlayeded.textContent = total;
 
