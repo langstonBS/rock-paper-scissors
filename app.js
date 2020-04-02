@@ -6,6 +6,7 @@ const playButten = document.getElementById('button-press');
 let loseGames = document.getElementById('loss');
 let winGames = document.getElementById('win');
 let gamesPlayeded = document.getElementById('games');
+const resetButton = document.getElementById('reset-button');
 
 let win = 0;
 let loss = 0;
@@ -55,7 +56,17 @@ function tellThePlayer(win, lose, total)
     gamesPlayeded.textContent = total;
 }
 
+resetButton.addEventListener('click', () => {
+    winGames.textContent = '0';
+    loseGames.textContent = '0';
+    gamesPlayeded.textContent = '0';
 
+    win = 0;
+    loss = 0;
+    person = 0;
+    total = 0;
+
+});
 
 //anitlize values
 

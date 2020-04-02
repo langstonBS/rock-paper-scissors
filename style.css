@@ -1,15 +1,26 @@
 
 
-
-section {
-    display: flex;
-    
-}
-div {
-       
+* {
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+background: lightblue;
+     
+}
+
+.main-container {
+    margin: 100px auto;
+    width: 50%;
     text-align: center;
-    color: brown;
+    border: black 2px solid;
+    padding: 50px;
+    border-radius: 40px;
+    background: -webkit-linear-gradient(rgba(241, 171, 6, 0.815),orange );
 }
+
+label {
+    margin: 20px auto;
+    padding: 10px;
+}
+
