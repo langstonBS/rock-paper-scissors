@@ -10,38 +10,30 @@
 </head>
 
 <body>
-    <header>  
-        <h1><em>Rock</em> papper sizers will never die</h1>     
-    </header>
-    <section class="body">
+    <main class="main-container">
 
-        <div class="rules">
-            <p>
-                How to play the game you chuse eather rock paper or sizers and you press submit.  and you wi or lose
+            <h1 id="header">Rock, paper, scissors will never die</h1>     
 
-            </p>
+            <section class="rules">
+                <p> How to play the game you choose either rock paper
+                    or scissors and you press submit.  and you win or lose</p>
+            </section>
 
-        </div>
-        <div class="selection">
-            <input type="radio" id="rock" name="play-game" value="rock">
-            <label for="rock">Rock</label><br>
-            <input type="radio" id="paper" name="play-game" value="paper">
-            <label for="paper">Paper</label><br>
-            <input type="radio" id="sizers" name="play-game" value="sizers">
-            <label for="other">sizers</label>
-        </div>
-        <div><button id="button-press">Play</button></div>
-        <div><span id="message">bla bla </span></div>
-        <div class="games-played">Games Played: <span id="games"> </span></div>
-        <div class="loss">loss: <span id="loss"> </span> </div>
-        <div class="win"> win: <span id="win"> </span></div>
+            <section class="selection">
+                <label for=""> Rock <input type="radio" id="rock" name="play-game" value="rock"> </label>  
+                <label for=""> Paper <input type="radio" id="paper" name="play-game" value="paper"> </label>            
+                <label for=""> Scissors <input type="radio" id="sizers" name="play-game" value="sizers"> </label>
+            </section>
 
-    </section>
-
-    <footer>
-
-    </footer>
-
+            <section>
+                <div><button id="button-press">Play</button></div>
+                <div><span id="message"> </span></div>
+                <div class="games-played">Games Played: <span id="games">0</span></div>
+                <div class="loss">loss: <span id="loss">0</span></div>
+                <div class="win"> win: <span id="win">0</span></div>
+                <div><button id="reset-button">Reset</button></div>
+            </section>
+    </main>
     <script type="module" src="app.js"></script>
 </body>
 
