@@ -1,6 +1,6 @@
 import { winOrLose } from './src/winOrLose.js';
 
-//git values from HTML
+//get values from HTML here:
 const playButten = document.getElementById('button-press');
 let computerThrowSpan = document.getElementById('message');
 let loseGames = document.getElementById('loss');
@@ -8,6 +8,7 @@ let winGames = document.getElementById('win');
 let gamesPlayeded = document.getElementById('games');
 const resetButton = document.getElementById('reset-button');
 
+//initializes status counters here:
 let win = 0;
 let loss = 0;
 let person = 0;
@@ -15,11 +16,10 @@ let total = 0;
 
 playButten.addEventListener('click', () => {
     const selectedChoice = document.querySelector('input[type=radio]:checked');
-    console.log(selectedChoice);
     let selection = selectedChoice.value;
     let computer = computerPlay();
     let winner = winOrLose(person, computer);
-
+    //changes radio input to number:
     if (selection === 'rock'){
         person = 0;
     } else if (selection === 'paper'){
@@ -27,8 +27,6 @@ playButten.addEventListener('click', () => {
     } else {
         person = 2;
     }
-
-    
 
     countWinOrLoss(winner);
     tellThePlayer(win, loss, total);   
@@ -47,7 +45,6 @@ function computerPlay() {
 
     }
     return compterMove;
-
 }
 
 function countWinOrLoss(winRecord)
@@ -69,6 +66,7 @@ function tellThePlayer(win, lose, total)
     gamesPlayeded.textContent = total;
 }
 
+//resets spans and status counters to zero here:
 resetButton.addEventListener('click', () => {
     winGames.textContent = '0';
     loseGames.textContent = '0';
@@ -79,11 +77,4 @@ resetButton.addEventListener('click', () => {
     loss = 0;
     person = 0;
     total = 0;
-
 });
-
-//anitlize values
-
-
-
-//do grate things

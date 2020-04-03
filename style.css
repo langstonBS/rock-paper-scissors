@@ -1,12 +1,9 @@
-
-
 * {
     box-sizing: border-box;
 }
 
 body {
-background: lightblue;
-     
+background: lightblue;     
 }
 
 #header {
@@ -14,7 +11,7 @@ background: lightblue;
     font-weight: 800;
 }
 
-main{
+main {
     margin: 100px auto;
     width: 75%;
     text-align: center;
@@ -26,14 +23,7 @@ main{
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 20px 2px;
-
 }
-
-
- .selection {
-     margin: auto;
-     padding: 20px;    
- }
 
 button {
     margin: 15px;
