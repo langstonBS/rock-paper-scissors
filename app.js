@@ -15,6 +15,7 @@ let total = 0;
 
 playButten.addEventListener('click', () => {
     const selectedChoice = document.querySelector('input[type=radio]:checked');
+    console.log(selectedChoice);
     let selection = selectedChoice.value;
     let computer = computerPlay();
     let winner = winOrLose(person, computer);

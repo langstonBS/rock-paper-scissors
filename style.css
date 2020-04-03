@@ -9,7 +9,7 @@ background: lightblue;
      
 }
 
-.main-container {
+main{
     margin: 100px auto;
     width: 50%;
     text-align: center;
@@ -17,10 +17,7 @@ background: lightblue;
     padding: 50px;
     border-radius: 40px;
     background: -webkit-linear-gradient(rgba(241, 171, 6, 0.815),orange );
+    font-family: arial;
 }
 
-label {
-    margin: 20px auto;
-    padding: 10px;
-}
-
+ 
